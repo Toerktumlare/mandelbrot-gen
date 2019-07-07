@@ -103,11 +103,12 @@ static int resolveArgs(int argc, char* argv[]) {
 }
 
 void printProperties() {
-    std::cout << "Set properties:Starting image generation" << std::endl;
+    std::cout << "Defined properties:" << std::endl;
     std::cout << "\t Dimensions:" << std::endl;
     std::cout << "\t\t Height: " << HEIGHT << std::endl;
     std::cout << "\t\t Width: " << WIDTH << std::endl;
-    std::cout << "\t\t Filename: " << filename << std::endl;
+    std::cout << "\tFilename: " << filename << std::endl;
+    std::cout << "\t\t" << filename << std::endl;
 }
 
 int main(int argc, char* argv[]) {
@@ -119,7 +120,7 @@ int main(int argc, char* argv[]) {
     
     printProperties();
     
-    std::cout << "<#value#>" << std::endl;
+    std::cout << "Starting image generation" << std::endl;
     CImg<float> img(WIDTH, HEIGHT, DEPTH, COLOR_SPECTRUM, 0);
     
     int percentage = 0;

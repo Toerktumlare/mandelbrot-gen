@@ -25,6 +25,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		E92B4FA622D26FDA00AFADD6 /* mandelbrot-6-2048.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mandelbrot-6-2048.png"; sourceTree = "<group>"; };
+		E92B4FA722D26FDB00AFADD6 /* mandelbrot-4-2048.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mandelbrot-4-2048.png"; sourceTree = "<group>"; };
+		E92B4FA822D26FDB00AFADD6 /* mandelbrot-5-2048.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mandelbrot-5-2048.png"; sourceTree = "<group>"; };
+		E92B4FA922D26FDB00AFADD6 /* mandelbrot-big2048.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mandelbrot-big2048.png"; sourceTree = "<group>"; };
+		E92B4FAA22D26FDB00AFADD6 /* mandelbrot-1-2048.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mandelbrot-1-2048.png"; sourceTree = "<group>"; };
+		E92B4FAB22D26FDB00AFADD6 /* mandelbrot-3-2048.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mandelbrot-3-2048.png"; sourceTree = "<group>"; };
+		E92B4FAC22D26FDB00AFADD6 /* mandelbrot-2-2048.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mandelbrot-2-2048.png"; sourceTree = "<group>"; };
 		E98D3EE722CBAA3900003036 /* mandelbrot-gen */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "mandelbrot-gen"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E98D3EEA22CBAA3900003036 /* Main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Main.cpp; sourceTree = "<group>"; };
 		E9B7138C22D138AC00EF38E9 /* CImg.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CImg.h; sourceTree = "<group>"; };
@@ -33,7 +40,6 @@
 		E9ED395422D0EE9A00EB62E8 /* CMakeLists.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CMakeLists.txt; sourceTree = "<group>"; };
 		E9ED395522D10A1700EB62E8 /* ArgUtils.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ArgUtils.cpp; sourceTree = "<group>"; };
 		E9ED395822D10BD100EB62E8 /* ArgUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ArgUtils.h; sourceTree = "<group>"; };
-		E9FB942B22CC01F60075248B /* output */ = {isa = PBXFileReference; lastKnownFileType = folder; path = output; sourceTree = "<group>"; };
 		E9FB942C22CE900B0075248B /* libpng16.16.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libpng16.16.dylib; path = ../../../../../../usr/local/Cellar/libpng/1.6.37/lib/libpng16.16.dylib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -52,11 +58,11 @@
 		E98D3EDE22CBAA3900003036 = {
 			isa = PBXGroup;
 			children = (
+				E9B7138F22D24EE700EF38E9 /* images */,
 				E9B7138E22D24AD800EF38E9 /* README.md */,
 				E9B7138D22D24A2900EF38E9 /* .gitignore */,
 				E9ED395722D10B6D00EB62E8 /* include */,
 				E9ED395422D0EE9A00EB62E8 /* CMakeLists.txt */,
-				E9FB942B22CC01F60075248B /* output */,
 				E98D3EE922CBAA3900003036 /* src */,
 				E98D3EE822CBAA3900003036 /* Products */,
 				E98D3EF122CBAFF800003036 /* Frameworks */,
@@ -86,6 +92,20 @@
 				E9FB942C22CE900B0075248B /* libpng16.16.dylib */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E9B7138F22D24EE700EF38E9 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				E92B4FAA22D26FDB00AFADD6 /* mandelbrot-1-2048.png */,
+				E92B4FAC22D26FDB00AFADD6 /* mandelbrot-2-2048.png */,
+				E92B4FAB22D26FDB00AFADD6 /* mandelbrot-3-2048.png */,
+				E92B4FA722D26FDB00AFADD6 /* mandelbrot-4-2048.png */,
+				E92B4FA822D26FDB00AFADD6 /* mandelbrot-5-2048.png */,
+				E92B4FA622D26FDA00AFADD6 /* mandelbrot-6-2048.png */,
+				E92B4FA922D26FDB00AFADD6 /* mandelbrot-big2048.png */,
+			);
+			path = images;
 			sourceTree = "<group>";
 		};
 		E9ED395722D10B6D00EB62E8 /* include */ = {
