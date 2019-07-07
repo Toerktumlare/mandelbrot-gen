@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E98D3EEB22CBAA3900003036 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E98D3EEA22CBAA3900003036 /* main.cpp */; };
+		E98D3EEB22CBAA3900003036 /* Main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E98D3EEA22CBAA3900003036 /* Main.cpp */; };
+		E9ED395622D10A1700EB62E8 /* ArgUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E9ED395522D10A1700EB62E8 /* ArgUtils.cpp */; };
+		E9FB942D22CE900B0075248B /* libpng16.16.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E9FB942C22CE900B0075248B /* libpng16.16.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -23,8 +25,16 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		E98D3EE722CBAA3900003036 /* Mandelbrot set plotter */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Mandelbrot set plotter"; sourceTree = BUILT_PRODUCTS_DIR; };
-		E98D3EEA22CBAA3900003036 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		E98D3EE722CBAA3900003036 /* mandelbrot-gen */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "mandelbrot-gen"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E98D3EEA22CBAA3900003036 /* Main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Main.cpp; sourceTree = "<group>"; };
+		E9B7138C22D138AC00EF38E9 /* CImg.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CImg.h; sourceTree = "<group>"; };
+		E9B7138D22D24A2900EF38E9 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		E9B7138E22D24AD800EF38E9 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		E9ED395422D0EE9A00EB62E8 /* CMakeLists.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CMakeLists.txt; sourceTree = "<group>"; };
+		E9ED395522D10A1700EB62E8 /* ArgUtils.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ArgUtils.cpp; sourceTree = "<group>"; };
+		E9ED395822D10BD100EB62E8 /* ArgUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ArgUtils.h; sourceTree = "<group>"; };
+		E9FB942B22CC01F60075248B /* output */ = {isa = PBXFileReference; lastKnownFileType = folder; path = output; sourceTree = "<group>"; };
+		E9FB942C22CE900B0075248B /* libpng16.16.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libpng16.16.dylib; path = ../../../../../../usr/local/Cellar/libpng/1.6.37/lib/libpng16.16.dylib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +42,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9FB942D22CE900B0075248B /* libpng16.16.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -41,33 +52,57 @@
 		E98D3EDE22CBAA3900003036 = {
 			isa = PBXGroup;
 			children = (
-				E98D3EE922CBAA3900003036 /* Mandelbrot set plotter */,
+				E9B7138E22D24AD800EF38E9 /* README.md */,
+				E9B7138D22D24A2900EF38E9 /* .gitignore */,
+				E9ED395722D10B6D00EB62E8 /* include */,
+				E9ED395422D0EE9A00EB62E8 /* CMakeLists.txt */,
+				E9FB942B22CC01F60075248B /* output */,
+				E98D3EE922CBAA3900003036 /* src */,
 				E98D3EE822CBAA3900003036 /* Products */,
+				E98D3EF122CBAFF800003036 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
 		E98D3EE822CBAA3900003036 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				E98D3EE722CBAA3900003036 /* Mandelbrot set plotter */,
+				E98D3EE722CBAA3900003036 /* mandelbrot-gen */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		E98D3EE922CBAA3900003036 /* Mandelbrot set plotter */ = {
+		E98D3EE922CBAA3900003036 /* src */ = {
 			isa = PBXGroup;
 			children = (
-				E98D3EEA22CBAA3900003036 /* main.cpp */,
+				E98D3EEA22CBAA3900003036 /* Main.cpp */,
+				E9ED395522D10A1700EB62E8 /* ArgUtils.cpp */,
 			);
-			path = "Mandelbrot set plotter";
+			path = src;
+			sourceTree = "<group>";
+		};
+		E98D3EF122CBAFF800003036 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E9FB942C22CE900B0075248B /* libpng16.16.dylib */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E9ED395722D10B6D00EB62E8 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				E9B7138C22D138AC00EF38E9 /* CImg.h */,
+				E9ED395822D10BD100EB62E8 /* ArgUtils.h */,
+			);
+			path = include;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		E98D3EE622CBAA3900003036 /* Mandelbrot set plotter */ = {
+		E98D3EE622CBAA3900003036 /* mandelbrot-gen */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E98D3EEE22CBAA3900003036 /* Build configuration list for PBXNativeTarget "Mandelbrot set plotter" */;
+			buildConfigurationList = E98D3EEE22CBAA3900003036 /* Build configuration list for PBXNativeTarget "mandelbrot-gen" */;
 			buildPhases = (
 				E98D3EE322CBAA3900003036 /* Sources */,
 				E98D3EE422CBAA3900003036 /* Frameworks */,
@@ -77,9 +112,9 @@
 			);
 			dependencies = (
 			);
-			name = "Mandelbrot set plotter";
+			name = "mandelbrot-gen";
 			productName = "Mandelbrot set plotter";
-			productReference = E98D3EE722CBAA3900003036 /* Mandelbrot set plotter */;
+			productReference = E98D3EE722CBAA3900003036 /* mandelbrot-gen */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
@@ -96,7 +131,7 @@
 					};
 				};
 			};
-			buildConfigurationList = E98D3EE222CBAA3900003036 /* Build configuration list for PBXProject "Mandelbrot set plotter" */;
+			buildConfigurationList = E98D3EE222CBAA3900003036 /* Build configuration list for PBXProject "mandelbrot-gen" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -108,7 +143,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				E98D3EE622CBAA3900003036 /* Mandelbrot set plotter */,
+				E98D3EE622CBAA3900003036 /* mandelbrot-gen */,
 			);
 		};
 /* End PBXProject section */
@@ -118,7 +153,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E98D3EEB22CBAA3900003036 /* main.cpp in Sources */,
+				E9ED395622D10A1700EB62E8 /* ArgUtils.cpp in Sources */,
+				E98D3EEB22CBAA3900003036 /* Main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,7 +276,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				HEADER_SEARCH_PATHS = (
+					"/usr/local/Cellar/libpng/1.6.37/include/**",
+					/opt/X11/include,
+				);
+				LIBRARY_SEARCH_PATHS = "/usr/local/Cellar/libpng/1.6.37/lib/**";
+				OTHER_LDFLAGS = "-lpng";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "${SRCROOT}/include";
 			};
 			name = Debug;
 		};
@@ -248,14 +291,21 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				HEADER_SEARCH_PATHS = (
+					"/usr/local/Cellar/libpng/1.6.37/include/**",
+					/opt/X11/include,
+				);
+				LIBRARY_SEARCH_PATHS = "/usr/local/Cellar/libpng/1.6.37/lib/**";
+				OTHER_LDFLAGS = "-lpng";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "${SRCROOT}/include";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		E98D3EE222CBAA3900003036 /* Build configuration list for PBXProject "Mandelbrot set plotter" */ = {
+		E98D3EE222CBAA3900003036 /* Build configuration list for PBXProject "mandelbrot-gen" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E98D3EEC22CBAA3900003036 /* Debug */,
@@ -264,7 +314,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E98D3EEE22CBAA3900003036 /* Build configuration list for PBXNativeTarget "Mandelbrot set plotter" */ = {
+		E98D3EEE22CBAA3900003036 /* Build configuration list for PBXNativeTarget "mandelbrot-gen" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E98D3EEF22CBAA3900003036 /* Debug */,
