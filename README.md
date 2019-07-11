@@ -32,11 +32,11 @@ To render a basic image 640px / 480px you run:
 
 **Syntax**:
 
-Command | Type | required | description | example
---------|------|----------|-------------|--------
--h      | int  | yes      |img height   | -h640
--w      | int  | yes      |img width    | -h480
--f      | int  | no       |img width    | -fmyImage.png
+Command | Type    | required | description | example
+--------|---------|----------|-------------|--------
+-h      | int     | yes      |img height   | -h640
+-w      | int     | yes      |img width    | -h480
+-f      | string  | no       |filname      | -fmyImage.png
 
 Program only supports `PNG` image format and if no filename is supplied the default name is `default.png` (suprise!)
 
