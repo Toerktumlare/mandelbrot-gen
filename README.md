@@ -26,7 +26,9 @@ make
 
 To render a basic image 640px / 480px you run:
 
-``` ./mandelbrot-gen -w640 -h480 ```
+``` 
+./mandelbrot-gen -w640 -h480 
+```
 
 **Syntax**:
 
