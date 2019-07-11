@@ -16,11 +16,11 @@ A mandelbrot image generator written in C++.
 
 ### How to build
 
-Make sure you have cmake installad and a compiler that supports at least C++11
+Make sure you have cmake installed and a compiler that supports at least C++11 (clang, gnu)
 
-Checkout this repo then run in the root folder
+Checkout this repo then run in the project root folder
 ```
-cmake
+cmake .
 make
 ```
 
