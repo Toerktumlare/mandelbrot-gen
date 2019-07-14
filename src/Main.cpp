@@ -2,16 +2,14 @@
 #include <iostream>
 #include <complex>
 
-
 #define cimg_use_png
 #define cimg_display 0
 
 #include "CImg.h"
 #include "ArgUtils.h"
+#include "ImgUtils.h"
 
 using namespace cimg_library;
-
-//65536, 36864
 
 const char CMD_ARG_HEIGHT = 'h';
 const char CMD_ARG_WIDTH = 'w';
@@ -31,17 +29,17 @@ const int IM_END = 1;
 
 double mandelbrot(const std::complex<double> &value) {
     std::complex<double> z(0, 0);
-    int n = 0;
-    while (norm(z) <= 4 && n < MAX_ITER){
+    int iterations = 0;
+    while (norm(z) <= 4 && iterations < MAX_ITER){
         z = (z * z) + value;
-        n += 1;
+        iterations += 1;
     }
     
-    if(n == MAX_ITER) {
-        return n;
+    if(iterations == MAX_ITER) {
+        return iterations;
     }
     
-    return n + 1 - std::log2(log(norm(z)) * 0.5);
+    return ImgUtils::filter(iterations, z);
 }
 
 static void show_usage()
@@ -59,7 +57,7 @@ static void show_usage()
 
 static int resolveArgs(int argc, char* argv[]) {
     for (int i = 1; i < argc; ++i) {
-        std::string arg = argv[i];
+        const std::string arg = argv[i];
         char c = arg.at(1);
         
         switch(c) {

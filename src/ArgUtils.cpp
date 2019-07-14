@@ -1,5 +1,7 @@
 #include <string>
 #include <iostream>
+#include <complex>
+#include <math.h>
 
 #include "ArgUtils.h"
 
@@ -7,7 +9,7 @@ void ArgUtils::print(const char *value) {
     std::cout << value << std::endl;
 }
 
-std::string ArgUtils::extractValue(std::string value) {
+std::string ArgUtils::extractValue(const std::string &value) {
     return value.substr(2, value.size());
 }
 

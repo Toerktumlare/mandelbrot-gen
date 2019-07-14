@@ -10,6 +10,7 @@
 		E98D3EEB22CBAA3900003036 /* Main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E98D3EEA22CBAA3900003036 /* Main.cpp */; };
 		E9ED395622D10A1700EB62E8 /* ArgUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E9ED395522D10A1700EB62E8 /* ArgUtils.cpp */; };
 		E9FB942D22CE900B0075248B /* libpng16.16.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E9FB942C22CE900B0075248B /* libpng16.16.dylib */; };
+		E9FCCAEA22DB722E00711229 /* ImgUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E9FCCAE922DB722E00711229 /* ImgUtils.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -41,6 +42,8 @@
 		E9ED395522D10A1700EB62E8 /* ArgUtils.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ArgUtils.cpp; sourceTree = "<group>"; };
 		E9ED395822D10BD100EB62E8 /* ArgUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ArgUtils.h; sourceTree = "<group>"; };
 		E9FB942C22CE900B0075248B /* libpng16.16.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libpng16.16.dylib; path = ../../../../../../usr/local/Cellar/libpng/1.6.37/lib/libpng16.16.dylib; sourceTree = "<group>"; };
+		E9FCCAE822DB71DE00711229 /* ImgUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImgUtils.h; sourceTree = "<group>"; };
+		E9FCCAE922DB722E00711229 /* ImgUtils.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ImgUtils.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +85,7 @@
 			children = (
 				E98D3EEA22CBAA3900003036 /* Main.cpp */,
 				E9ED395522D10A1700EB62E8 /* ArgUtils.cpp */,
+				E9FCCAE922DB722E00711229 /* ImgUtils.cpp */,
 			);
 			path = src;
 			sourceTree = "<group>";
@@ -113,6 +117,7 @@
 			children = (
 				E9B7138C22D138AC00EF38E9 /* CImg.h */,
 				E9ED395822D10BD100EB62E8 /* ArgUtils.h */,
+				E9FCCAE822DB71DE00711229 /* ImgUtils.h */,
 			);
 			path = include;
 			sourceTree = "<group>";
@@ -174,6 +179,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E9ED395622D10A1700EB62E8 /* ArgUtils.cpp in Sources */,
+				E9FCCAEA22DB722E00711229 /* ImgUtils.cpp in Sources */,
 				E98D3EEB22CBAA3900003036 /* Main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
