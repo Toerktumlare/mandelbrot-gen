@@ -6,7 +6,9 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 project(mandelbrot-gen)
 
 include_directories(${PROJECT_SOURCE_DIR}/include)
-add_executable(mandelbrot-gen src/Main.cpp src/ArgUtils.cpp rc/ImgUtils.cpp)
+add_executable(mandelbrot-gen src/Main.cpp src/ArgUtils.cpp src/ImgUtils.cpp)
+
+target_link_options(mandelbrot-gen PRIVATE -s)
 
 find_package(PNG REQUIRED)
 include_directories(${PNG_INCLUDE_DIR})
